@@ -1870,11 +1870,22 @@ class IOSystem(CoreSystem):
             filename=None,
             max_npaths=1000,
             index=None):
-        """
-        stressor must be a dictionary with this format:
+
+        """ Returns a list of most contributing paths following the structural path analysis algorithm of Peters and Hertwich (2006, ESR).
+
+        Based on a MATLAB version written by Yasushi Kondo, initially written by Glen Peters.
+Reference: 
+
+
+        - stressor must be a dictionary with this format:
                     {'ext_name':'emissions',
                     'substance':'emission_type1',
-                    'compartment':'air'},
+                    'compartment':'air'}
+
+        Use with the test_mrio:
+
+        paths = test_mrio.SPA(stressor={'ext_name':'emissions', 'substance':'emission_type1', 'compartment':'air'}, region='reg1', sector='food', threshold=0.00001)
+        
         """
         
         S = getattr(self, stressor['ext_name']).S.loc[(stressor['substance'],stressor['compartment'])]
@@ -1882,7 +1893,6 @@ class IOSystem(CoreSystem):
         
         y = pd.Series(np.zeros_like(self.x.T.squeeze()), index=self.x.index, name='unit_demand')
         y.loc[(region,sector)] = 1
-
 
         return SPA(S, self.A, y, M=M, Tmax=Tmax, threshold=threshold)
 
