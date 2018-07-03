@@ -59,9 +59,9 @@ class CoreSystem():
 
     def __str__(self, startstr='System with: '):
         parastr = ', '.join([attr for attr in
-                            self.__dict__
-                            if self.__dict__[attr] is not None and
-                            '__' not in attr])
+                             self.__dict__
+                             if self.__dict__[attr] is not None and
+                             '__' not in attr])
         return startstr + parastr
 
     def reset_full(self):
@@ -70,9 +70,9 @@ class CoreSystem():
         # Attriubtes to keep must be defined in the init: __basic__
         [setattr(self, key, None)
          for key in self.get_DataFrame(
-                data=False,
-                with_unit=False,
-                with_population=False)
+            data=False,
+            with_unit=False,
+            with_population=False)
          if key not in self.__basic__]
         return self
 
@@ -631,8 +631,8 @@ class Extension(CoreSystem):
 
     def __str__(self):
         return super().__str__(
-                "Extension {} with parameters: "
-                ).format(self.name)
+            "Extension {} with parameters: "
+        ).format(self.name)
 
     def calc_system(self, x, Y_agg, L=None, population=None):
         """ Calculates the missing part of the extension plus accounts
@@ -695,8 +695,8 @@ class Extension(CoreSystem):
                         'D_cba and Y'.format(self.name))
                 except Exception as ex:
                     logging.debug(
-                            'Recalculation of M not possible - cause: {}'.
-                            format(ex))
+                        'Recalculation of M not possible - cause: {}'.
+                        format(ex))
 
         FY_agg = 0
         if self.FY is not None:
@@ -728,36 +728,36 @@ class Extension(CoreSystem):
                 (self.D_imp_reg is None) or (self.D_exp_reg is None)):
             try:
                 self.D_cba_reg = (
-                        self.D_cba.sum(level='region', axis=1).
-                        reindex(self.get_regions(), axis=1) + FY_agg)
+                    self.D_cba.sum(level='region', axis=1).
+                    reindex(self.get_regions(), axis=1) + FY_agg)
             except (AssertionError, KeyError):
                 self.D_cba_reg = (
-                        self.D_cba.sum(level=0, axis=1).
-                        reindex(self.get_regions(), axis=1) + FY_agg)
+                    self.D_cba.sum(level=0, axis=1).
+                    reindex(self.get_regions(), axis=1) + FY_agg)
             try:
                 self.D_pba_reg = (
-                        self.D_pba.sum(level='region', axis=1).
-                        reindex(self.get_regions(), axis=1) + FY_agg)
+                    self.D_pba.sum(level='region', axis=1).
+                    reindex(self.get_regions(), axis=1) + FY_agg)
             except (AssertionError, KeyError):
                 self.D_pba_reg = (
-                        self.D_pba.sum(level=0, axis=1).
-                        reindex(self.get_regions(), axis=1) + FY_agg)
+                    self.D_pba.sum(level=0, axis=1).
+                    reindex(self.get_regions(), axis=1) + FY_agg)
             try:
                 self.D_imp_reg = (
-                        self.D_imp.sum(level='region', axis=1).
-                        reindex(self.get_regions(), axis=1))
+                    self.D_imp.sum(level='region', axis=1).
+                    reindex(self.get_regions(), axis=1))
             except (AssertionError, KeyError):
                 self.D_imp_reg = (
-                        self.D_imp.sum(level=0, axis=1).
-                        reindex(self.get_regions(), axis=1))
+                    self.D_imp.sum(level=0, axis=1).
+                    reindex(self.get_regions(), axis=1))
             try:
                 self.D_exp_reg = (
-                        self.D_exp.sum(level='region', axis=1).
-                        reindex(self.get_regions(), axis=1))
+                    self.D_exp.sum(level='region', axis=1).
+                    reindex(self.get_regions(), axis=1))
             except (AssertionError, KeyError):
                 self.D_exp_reg = (
-                        self.D_exp.sum(level=0, axis=1).
-                        reindex(self.get_regions(), axis=1))
+                    self.D_exp.sum(level=0, axis=1).
+                    reindex(self.get_regions(), axis=1))
 
             logging.debug(
                 '{} - Accounts D for regions calculated'.format(self.name))
@@ -775,13 +775,13 @@ class Extension(CoreSystem):
             if ((self.D_cba_cap is None) or (self.D_pba_cap is None) or
                     (self.D_imp_cap is None) or (self.D_exp_cap is None)):
                 self.D_cba_cap = self.D_cba_reg.dot(
-                        np.diagflat(1./population))
+                    np.diagflat(1./population))
                 self.D_pba_cap = self.D_pba_reg.dot(
-                        np.diagflat(1./population))
+                    np.diagflat(1./population))
                 self.D_imp_cap = self.D_imp_reg.dot(
-                        np.diagflat(1./population))
+                    np.diagflat(1./population))
                 self.D_exp_cap = self.D_exp_reg.dot(
-                        np.diagflat(1./population))
+                    np.diagflat(1./population))
 
                 self.D_cba_cap.columns = self.D_cba_reg.columns
                 self.D_pba_cap.columns = self.D_pba_reg.columns
@@ -904,12 +904,12 @@ class Extension(CoreSystem):
             if sector:
                 try:
                     _data = pd.DataFrame(
-                             getattr(self, accounts[key]).xs(
-                                 key=sector, axis=1, level='sector').ix[row].T)
+                        getattr(self, accounts[key]).xs(
+                            key=sector, axis=1, level='sector').ix[row].T)
                 except (AssertionError, KeyError):
                     _data = pd.DataFrame(
-                             getattr(self, accounts[key]).xs(
-                                 key=sector, axis=1, level=1).ix[row].T)
+                        getattr(self, accounts[key]).xs(
+                            key=sector, axis=1, level=1).ix[row].T)
 
                 if per_capita:
                     if population is not None:
@@ -1017,7 +1017,7 @@ class Extension(CoreSystem):
 
         reports_to_write = {'per region accounts': rep_spec(
             per_region, '_per_region', False),
-                            'per capita accounts': rep_spec(
+            'per capita accounts': rep_spec(
             per_capita, '_per_capita', True)}
         logging.info('Write report for {}'.format(self.name))
         fig_name_list = []
@@ -1202,15 +1202,15 @@ class Extension(CoreSystem):
         ext_diag = Extension(name)
 
         ext_diag.F = pd.DataFrame(
-                index=self.F.columns,
-                columns=self.F.columns,
-                data=np.diag(self.F.loc[stressor, :])
-                )
+            index=self.F.columns,
+            columns=self.F.columns,
+            data=np.diag(self.F.loc[stressor, :])
+        )
         try:
             ext_diag.unit = pd.DataFrame(
-                    index=ext_diag.F.index,
-                    columns=self.unit.columns,
-                    data=self.unit.loc[stressor].unit)
+                index=ext_diag.F.index,
+                columns=self.unit.columns,
+                data=self.unit.loc[stressor].unit)
         except AttributeError:
             # If no unit in stressor, self.unit.columns break
             ext_diag.unit = None
@@ -1367,12 +1367,12 @@ class IOSystem(CoreSystem):
             self.meta._add_modify('Industry output x calculated')
 
         if self.A is None:
-                self.A = calc_A(self.Z, self.x)
-                self.meta._add_modify('Coefficient matrix A calculated')
+            self.A = calc_A(self.Z, self.x)
+            self.meta._add_modify('Coefficient matrix A calculated')
 
         if self.L is None:
-                self.L = calc_L(self.A)
-                self.meta._add_modify('Leontief matrix L calculated')
+            self.L = calc_L(self.A)
+            self.meta._add_modify('Leontief matrix L calculated')
 
         return self
 
@@ -1673,26 +1673,26 @@ class IOSystem(CoreSystem):
 
         # build the new names
         if (not _same_regions) and (not region_names):
-                if isinstance(region_agg, np.ndarray):
-                    region_agg = region_agg.flatten().tolist()
-                if type(region_agg[0]) is str:
-                    region_names = ioutil.unique_element(region_agg)
-                else:
-                    # rows in the concordance matrix give the new number of
-                    # regions
-                    region_names = [GENERIC_NAMES['region'] +
-                                    str(nr) for nr in
-                                    range(region_conc.shape[0])]
+            if isinstance(region_agg, np.ndarray):
+                region_agg = region_agg.flatten().tolist()
+            if type(region_agg[0]) is str:
+                region_names = ioutil.unique_element(region_agg)
+            else:
+                # rows in the concordance matrix give the new number of
+                # regions
+                region_names = [GENERIC_NAMES['region'] +
+                                str(nr) for nr in
+                                range(region_conc.shape[0])]
 
         if (not _same_sectors) and (not sector_names):
-                if isinstance(sector_agg, np.ndarray):
-                    sector_agg = (sector_agg.flatten().tolist())
-                if type(sector_agg[0]) is str:
-                    sector_names = ioutil.unique_element(sector_agg)
-                else:
-                    sector_names = [GENERIC_NAMES['sector'] +
-                                    str(nr) for nr in
-                                    range(sector_conc.shape[0])]
+            if isinstance(sector_agg, np.ndarray):
+                sector_agg = (sector_agg.flatten().tolist())
+            if type(sector_agg[0]) is str:
+                sector_names = ioutil.unique_element(sector_agg)
+            else:
+                sector_names = [GENERIC_NAMES['sector'] +
+                                str(nr) for nr in
+                                range(sector_conc.shape[0])]
 
         # Assert right shapes
         if not sector_conc.shape[1] == len(self.get_sectors()):
@@ -1722,11 +1722,11 @@ class IOSystem(CoreSystem):
         _Ycat_list = list(self.get_Y_categories()) * region_conc.shape[0]
 
         mi_reg_sec = pd.MultiIndex.from_arrays(
-                [_reg_list_for_sec, _sec_list],
-                names=['region', 'sector'])
+            [_reg_list_for_sec, _sec_list],
+            names=['region', 'sector'])
         mi_reg_Ycat = pd.MultiIndex.from_arrays(
-                [_reg_list_for_Ycat, _Ycat_list],
-                names=['region', 'category'])
+            [_reg_list_for_Ycat, _Ycat_list],
+            names=['region', 'category'])
 
         # arrange the whole concordance matrix
         conc = np.kron(region_conc, sector_conc)
@@ -1735,26 +1735,26 @@ class IOSystem(CoreSystem):
         # Aggregate
         self.meta._add_modify('Aggregate final demand y')
         self.Y = pd.DataFrame(
-                    data=conc.dot(self.Y).dot(conc_y.T),
-                    index=mi_reg_sec,
-                    columns=mi_reg_Ycat,
-                    )
+            data=conc.dot(self.Y).dot(conc_y.T),
+            index=mi_reg_sec,
+            columns=mi_reg_Ycat,
+        )
 
         self.meta._add_modify('Aggregate transaction matrix Z')
         self.Z = pd.DataFrame(
-                    data=conc.dot(self.Z).dot(conc.T),
-                    index=mi_reg_sec,
-                    columns=mi_reg_sec,
-                    )
+            data=conc.dot(self.Z).dot(conc.T),
+            index=mi_reg_sec,
+            columns=mi_reg_sec,
+        )
 
         if self.x is not None:
             # x could also be obtained from the
             # aggregated Z, but aggregate if available
             self.x = pd.DataFrame(
-                        data=conc.dot(self.x),
-                        index=mi_reg_sec,
-                        columns=self.x.columns,
-                        )
+                data=conc.dot(self.x),
+                index=mi_reg_sec,
+                columns=self.x.columns,
+            )
             self.meta._add_modify('Aggregate industry output x')
         else:
             self.x = calc_x(self.Z, self.Y)
@@ -1765,7 +1765,7 @@ class IOSystem(CoreSystem):
                 data=region_conc.dot(self.population.T).T,
                 columns=region_names,
                 index=self.population.index,
-                )
+            )
 
         for extension in self.get_extensions(data=True):
             self.meta._add_modify('Aggregate extensions...')
@@ -1819,9 +1819,9 @@ class IOSystem(CoreSystem):
                     try:
                         _value = extension.unit.iloc[0].tolist()[0]
                         extension.unit = pd.DataFrame(
-                                index=mi_reg_sec,
-                                columns=extension.unit.columns,
-                                data=_value)
+                            index=mi_reg_sec,
+                            columns=extension.unit.columns,
+                            data=_value)
                     except AttributeError:
                         # could fail if no unit available
                         extension.unit = None
@@ -1870,30 +1870,36 @@ class IOSystem(CoreSystem):
             filename=None,
             max_npaths=1000,
             index=None):
-
-        """ Returns a list of most contributing paths following the structural path analysis algorithm of Peters and Hertwich (2006, ESR).
+        """ Returns a list of most contributing paths following the structural path analysis algorithm of Peters and Hertwich (2006, ESR) for a unit demand in a single sector.
 
         Based on a MATLAB version written by Yasushi Kondo, initially written by Glen Peters.
-Reference: 
 
-
-        - stressor must be a dictionary with this format:
+        - stressor (dictionary) must be a dictionary with this format:
                     {'ext_name':'emissions',
                     'substance':'emission_type1',
                     'compartment':'air'}
+        - region (string): region of unit demand,
+        - sector (string): sector of unit demand,
+        - Tmax (int): highest depth of path-searching,
+        - threshold (float): between 0 and 1, sets the tolerance/cutoff value to stop searching,
+        - filename (string): csv file name where to save the results,
+        - max_npaths (int): maximum number of paths
+        - index (list, iterable): 
 
-        Use with the test_mrio:
+        Use with the test_mrio after calc_all() has been performed:
 
         paths = test_mrio.SPA(stressor={'ext_name':'emissions', 'substance':'emission_type1', 'compartment':'air'}, region='reg1', sector='food', threshold=0.00001)
-        
+
         """
-        
-        S = getattr(self, stressor['ext_name']).S.loc[(stressor['substance'],stressor['compartment'])]
-        M = getattr(self, stressor['ext_name']).M.loc[(stressor['substance'],stressor['compartment'])]
-        
-        y = pd.Series(np.zeros_like(self.x.T.squeeze()), index=self.x.index, name='unit_demand')
-        y.loc[(region,sector)] = 1
+
+        S = getattr(self, stressor['ext_name']).S.loc[(
+            stressor['substance'], stressor['compartment'])]
+
+        M = getattr(self, stressor['ext_name']).M.loc[(
+            stressor['substance'], stressor['compartment'])]
+
+        y = pd.Series(np.zeros_like(self.x.T.squeeze()),
+                      index=self.x.index, name='unit_demand')
+        y.loc[(region, sector)] = 1
 
         return SPA(S, self.A, y, M=M, Tmax=Tmax, threshold=threshold)
-
-        
