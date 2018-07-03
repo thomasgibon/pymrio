@@ -1874,21 +1874,39 @@ class IOSystem(CoreSystem):
 
         Based on a MATLAB version written by Yasushi Kondo, initially written by Glen Peters.
 
-        - stressor (dictionary) must be a dictionary with this format:
+        Parameters
+        ----------
+        stressor : dictionary
+            must be a dictionary with this format:
                     {'ext_name':'emissions',
                     'substance':'emission_type1',
                     'compartment':'air'}
-        - region (string): region of unit demand,
-        - sector (string): sector of unit demand,
-        - Tmax (int): highest depth of path-searching,
-        - threshold (float): between 0 and 1, sets the tolerance/cutoff value to stop searching,
-        - filename (string): csv file name where to save the results,
-        - max_npaths (int): maximum number of paths
-        - index (list, iterable): 
+        region : string
+            region of unit demand
+        sector : string
+            sector of unit demand
+        Tmax : int
+            highest depth of path-searching
+        threshold : float
+            between 0 and 1, sets the tolerance/cutoff value to stop searching
+        filename : string
+            csv file name where to save the results
+        max_npaths : int
+            maximum number of paths
+        index : list or any iterable
+            list that can be forced to replace an existing index (corresponding to the stressor object)
 
+        Returns
+        -------
+        - Dataframe of most contributing paths, sorted from highest to lowest
+
+        Use
+        ---
         Use with the test_mrio after calc_all() has been performed:
 
         paths = test_mrio.SPA(stressor={'ext_name':'emissions', 'substance':'emission_type1', 'compartment':'air'}, region='reg1', sector='food', threshold=0.00001)
+
+        author: Thomas Gibon <t.gibon@gmail.com>
 
         """
 
@@ -1902,4 +1920,4 @@ class IOSystem(CoreSystem):
                       index=self.x.index, name='unit_demand')
         y.loc[(region, sector)] = 1
 
-        return SPA(S, self.A, y, M=M, Tmax=Tmax, threshold=threshold)
+        return SPA(S, self.A, y, M=M, Tmax=Tmax, threshold=threshold, filename=filename, max_npaths=max_npaths, index=index)
