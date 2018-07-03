@@ -32,6 +32,8 @@ from pymrio.tools.iomath import calc_x
 from pymrio.tools.iomath import calc_x_from_L
 from pymrio.tools.iomath import recalc_M
 
+from pymrio.tools.iomath import SPA
+
 import pymrio.tools.ioutil as ioutil
 
 from pymrio.core.constants import DEFAULT_FILE_NAMES
@@ -1858,3 +1860,30 @@ class IOSystem(CoreSystem):
                 self.meta._add_modify("Removed extension {}".format(ee))
 
         return self
+
+    def SPA(self,
+            stressor,
+            region,
+            sector,
+            Tmax=10,
+            threshold=0.001,
+            filename=None,
+            max_npaths=1000,
+            index=None):
+        """
+        stressor must be a dictionary with this format:
+                    {'ext_name':'emissions',
+                    'substance':'emission_type1',
+                    'compartment':'air'},
+        """
+        
+        S = getattr(self, stressor['ext_name']).S.loc[(stressor['substance'],stressor['compartment'])]
+        M = getattr(self, stressor['ext_name']).M.loc[(stressor['substance'],stressor['compartment'])]
+        
+        y = pd.Series(np.zeros_like(self.x.T.squeeze()), index=self.x.index, name='unit_demand')
+        y.loc[(region,sector)] = 1
+
+
+        return SPA(S, self.A, y, M=M, Tmax=Tmax, threshold=threshold)
+
+        
