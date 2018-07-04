@@ -1863,8 +1863,8 @@ class IOSystem(CoreSystem):
 
     def SPA(self,
             stressor,
-            region,
-            sector,
+            region=None,
+            sector=None,
             Tmax=10,
             threshold=0.001,
             filename=None,
@@ -1918,8 +1918,15 @@ class IOSystem(CoreSystem):
         M = getattr(self, stressor['ext_name']).M.loc[
             stressor['index']]
 
-        y = pd.Series(np.zeros_like(self.x.T.squeeze()),
+        if sector is not None:
+            y = pd.Series(np.zeros_like(self.x.T.squeeze()),
                       index=self.x.index, name='unit_demand')
-        y.loc[(region, sector)] = 1
+            y.loc[(region, sector)] = 1
+        elif region is not None:
+            y = pd.Series(np.zeros_like(self.x.T.squeeze()),
+                      index=self.x.index, name='unit_demand')
+            y[region] = self.Y[region].sum(1)
+        else:
+            y = self.Y.sum(1)
 
         return SPA(S, self.A, y, M=M, Tmax=Tmax, threshold=threshold, filename=filename, max_npaths=max_npaths, index=index)
