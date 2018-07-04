@@ -1925,7 +1925,7 @@ class IOSystem(CoreSystem):
         elif region is not None:
             y = pd.Series(np.zeros_like(self.x.T.squeeze()),
                       index=self.x.index, name='unit_demand')
-            y[region] = self.Y[region].sum(1)
+            y = self.Y[region].sum(1)
         else:
             y = self.Y.sum(1)
 
