@@ -1879,8 +1879,10 @@ class IOSystem(CoreSystem):
         stressor : dictionary
             must be a dictionary with this format:
                     {'ext_name':'emissions',
-                    'substance':'emission_type1',
-                    'compartment':'air'}
+                    'index':('emission_type1','air')}
+                    or
+                    {'ext_name':'satellite',
+                    'index':'CO2 - combustion - air'}
         region : string
             region of unit demand
         sector : string
@@ -1910,11 +1912,11 @@ class IOSystem(CoreSystem):
 
         """
 
-        S = getattr(self, stressor['ext_name']).S.loc[(
-            stressor['substance'], stressor['compartment'])]
+        S = getattr(self, stressor['ext_name']).S.loc[
+            stressor['index']]
 
-        M = getattr(self, stressor['ext_name']).M.loc[(
-            stressor['substance'], stressor['compartment'])]
+        M = getattr(self, stressor['ext_name']).M.loc[
+            stressor['index']]
 
         y = pd.Series(np.zeros_like(self.x.T.squeeze()),
                       index=self.x.index, name='unit_demand')

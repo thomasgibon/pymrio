@@ -341,6 +341,7 @@ def calc_accounts(S, L, Y, nr_sectors):
 
     return (D_cba, D_pba, D_imp, D_exp)
 
+
 def SPA(S, A, y, Tmax, threshold, M, filename=None, max_npaths=1000,
         index=None):
     '''
@@ -374,7 +375,7 @@ def SPA(S, A, y, Tmax, threshold, M, filename=None, max_npaths=1000,
 
     # Calculate total emissions and tolerance
     e = M.dot(y)
-    print(M,y,e)
+    print(M, y, e)
     tolerance = threshold * e
 
     # Start extracting the paths
