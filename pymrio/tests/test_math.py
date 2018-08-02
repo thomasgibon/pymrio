@@ -288,7 +288,6 @@ def td_small_MRIO():
                         ],
                  index=['TOTAL', 'REST', 4, 3, 7, 1, 2, 5, 6],
                  columns=['sequence', 'value', 'contribution', 'path'],
-                 dtype=('object')
                         )
 
 
@@ -475,8 +474,9 @@ def test_SPA(td_small_MRIO):
                 td_small_MRIO.Y.sum(1),
                 M=None, # the function must be able to recalculate M if it's missing
                 Tmax=10,
-                threshold=0.1)
-                
+                threshold=0.1,
+                max_npaths=1000)
+
     # test
     pdt.assert_frame_equal(
         td_small_MRIO.paths,

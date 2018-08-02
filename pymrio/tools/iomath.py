@@ -342,7 +342,7 @@ def calc_accounts(S, L, Y, nr_sectors):
     return (D_cba, D_pba, D_imp, D_exp)
 
 
-def SPA(S, A, y, Tmax, threshold, M, max_npaths=1000):
+def SPA(S, A, y, Tmax, threshold, M, max_npaths):
     '''
     Performs a structural path analysis on a given linear algebra system.
     The system can either be a life cycle or an input-output system.
@@ -385,11 +385,12 @@ def SPA(S, A, y, Tmax, threshold, M, max_npaths=1000):
     df_paths.sort_values('value', ascending=False, inplace=True)
     df_paths['contribution'] = df_paths['value']/e
 
+    # Add labels to sequence
     if type(index) in [list, pd.core.indexes.multi.MultiIndex, pd.core.index]:
         df_paths['path'] = [[index[ss] for ss in s]
                             for s in df_paths['sequence']]
 
-    return df_paths
+    return df_paths.apply(pd.to_numeric, errors='ignore')
 
 
 def extract_paths(S, A, y, M, Tmax, tolerance, max_npaths):
@@ -423,24 +424,28 @@ def extract_paths_rc(paths, count, sequence, val_wo_S, T, S, A, y, M, Tmax,
     max number of paths
     '''
 
-    if T > 0:
+    if T > 0 and count<max_npaths:
         count += 1
         paths[count] = {'sequence': sequence,
                         'value': S[sequence[-1]] * val_wo_S}
 
     if T <= Tmax:
         if T == 0:
+            # requirements at tier T = 0 (final demand)
             next_val_wo_S = y
         else:
+            # requirements at tier T > 0
             next_val_wo_S = A[:, sequence[-1]] * val_wo_S
-
+    
+    # life cycle emissions associated with tier T requirements
     next_subtree_val = M * next_val_wo_S
 
+    # if these are higher than the tolerance, keep searching
     tofind = np.where(next_subtree_val > tolerance)[0].tolist()
 
-    if count<max_npaths:
-        for i in tofind:
-            paths, count = extract_paths_rc(
+    # go through all nodes with an emission > tolerance
+    for i in tofind:
+        paths, count = extract_paths_rc(
                 paths, count, sequence + [i], next_val_wo_S[i], T+1, S, A, y, M, Tmax, tolerance, max_npaths)
 
     return paths, count

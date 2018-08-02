@@ -1867,7 +1867,7 @@ class IOSystem(CoreSystem):
             sector=None,
             Tmax=10,
             threshold=0.001,
-            max_npaths=1000):
+            max_npaths=10000):
         """ Returns a list of most contributing paths following the structural
         path analysis algorithm of Peters and Hertwich (2006, ESR) for a unit
         demand in a single sector.
@@ -1896,6 +1896,7 @@ class IOSystem(CoreSystem):
             csv file name where to save the results
         max_npaths : int
             maximum number of paths
+            AVOID USING THIS BOUNDARY CONDITION, YOU MAY MISS IMPORTANT FLOWS
 
         Returns
         -------
@@ -1925,6 +1926,7 @@ class IOSystem(CoreSystem):
             y = pd.Series(np.zeros_like(self.x.T.squeeze()),
                       index=self.x.index, name='unit_demand')
             y.loc[(region, sector)] = 1
+
         elif region is not None:
             y = pd.Series(np.zeros_like(self.x.T.squeeze()),
                       index=self.x.index, name='unit_demand')

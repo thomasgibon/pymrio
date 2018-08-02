@@ -1,0 +1,346 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+A	../pymrio/tests/test_math.py	/^        A = pd.DataFrame($/;"	kind:variable	line:175
+A_arr	../pymrio/tests/test_math.py	/^        A_arr = np.array([$/;"	kind:variable	line:49
+A_df	../pymrio/tests/test_math.py	/^        A_df = pd.DataFrame($/;"	kind:variable	line:53
+CoreSystem	../pymrio/core/mriosystem.py	/^class CoreSystem():$/;"	kind:class	line:51
+DEFAULT_FILE_NAMES	../pymrio/core/constants.py	/^DEFAULT_FILE_NAMES = {$/;"	kind:variable	line:30
+D_cba	../pymrio/tests/test_math.py	/^        D_cba = pd.DataFrame($/;"	kind:variable	line:232
+D_exp	../pymrio/tests/test_math.py	/^        D_exp = pd.DataFrame($/;"	kind:variable	line:259
+D_imp	../pymrio/tests/test_math.py	/^        D_imp = pd.DataFrame($/;"	kind:variable	line:250
+D_imp_values	../pymrio/tests/test_integration.py	/^            D_imp_values = np.array([$/;"	kind:variable	line:26
+D_pba	../pymrio/tests/test_math.py	/^        D_pba = pd.DataFrame($/;"	kind:variable	line:241
+EORA26_CONFIG	../pymrio/tools/iodownloader.py	/^EORA26_CONFIG = {$/;"	kind:variable	line:26
+Extension	../pymrio/core/mriosystem.py	/^class Extension(CoreSystem):$/;"	kind:class	line:539
+F	../pymrio/tests/test_math.py	/^        F = pd.DataFrame($/;"	kind:variable	line:165
+GENERIC_NAMES	../pymrio/core/constants.py	/^GENERIC_NAMES = {$/;"	kind:variable	line:23
+IDX_NAMES	../pymrio/tools/ioparser.py	/^IDX_NAMES = {$/;"	kind:variable	line:39
+IOSystem	../pymrio/core/mriosystem.py	/^class IOSystem(CoreSystem):$/;"	kind:class	line:1221
+IO_Data	../pymrio/tests/test_math.py	/^    class IO_Data():$/;"	kind:class	line:125
+IO_Data_Miller	../pymrio/tests/test_math.py	/^    class IO_Data_Miller():$/;"	kind:class	line:36
+L	../pymrio/tests/test_math.py	/^        L = pd.DataFrame($/;"	kind:variable	line:188
+L_arr	../pymrio/tests/test_math.py	/^        L_arr = np.array([$/;"	kind:variable	line:82
+L_df	../pymrio/tests/test_math.py	/^        L_df = pd.DataFrame(data=L_arr,$/;"	kind:variable	line:86
+M	../pymrio/tests/test_math.py	/^        M = pd.DataFrame($/;"	kind:variable	line:223
+MISSING_AGG_ENTRY	../pymrio/core/constants.py	/^MISSING_AGG_ENTRY = {$/;"	kind:variable	line:35
+MRIOMetaData	../pymrio/tools/iometadata.py	/^class MRIOMetaData(object):$/;"	kind:class	line:14
+PYMRIO_PATH	../pymrio/core/constants.py	/^PYMRIO_PATH = {$/;"	kind:variable	line:10
+ParserError	../pymrio/tools/ioparser.py	/^class ParserError(Exception):$/;"	kind:class	line:29
+ParserWarning	../pymrio/tools/ioparser.py	/^class ParserWarning(UserWarning):$/;"	kind:class	line:34
+ReadError	../pymrio/core/fileio.py	/^class ReadError(Exception):$/;"	kind:class	line:25
+S	../pymrio/tests/test_math.py	/^        S = pd.DataFrame($/;"	kind:variable	line:214
+SPA	../pymrio/core/mriosystem.py	/^    def SPA(self,$/;"	kind:member	line:1864
+SPA	../pymrio/tools/iomath.py	/^def SPA(S, A, y, Tmax, threshold, M, max_npaths):$/;"	kind:function	line:345
+TestMRIO	../pymrio/tests/test_core.py	/^    class TestMRIO:$/;"	kind:class	line:18
+WIOD_CONFIG	../pymrio/tools/iodownloader.py	/^WIOD_CONFIG = {$/;"	kind:variable	line:11
+Y	../pymrio/tests/test_math.py	/^        Y = pd.DataFrame($/;"	kind:variable	line:151
+Z	../pymrio/tests/test_math.py	/^        Z = pd.DataFrame($/;"	kind:variable	line:133
+Z_arr	../pymrio/tests/test_math.py	/^        Z_arr = np.array([$/;"	kind:variable	line:38
+Z_df	../pymrio/tests/test_math.py	/^        Z_df = pd.DataFrame($/;"	kind:variable	line:42
+_Y_multiindex	../pymrio/tests/test_math.py	/^        _Y_multiindex = pd.MultiIndex.from_product($/;"	kind:variable	line:148
+_Z_multiindex	../pymrio/tests/test_math.py	/^        _Z_multiindex = pd.MultiIndex.from_product($/;"	kind:variable	line:129
+__call__	../pymrio/tools/iometadata.py	/^    def __call__(self, note=None):$/;"	kind:member	line:293
+__get_WIOD_SEA_extension	../pymrio/tools/ioparser.py	/^def __get_WIOD_SEA_extension(root_path, year, data_sheet='DATA'):$/;"	kind:function	line:1521
+__get_WIOD_env_extension	../pymrio/tools/ioparser.py	/^def __get_WIOD_env_extension(root_path, year, ll_co, para):$/;"	kind:function	line:1360
+__init__	../pymrio/core/mriosystem.py	/^    def __init__(self, Z=None, Y=None, A=None, x=None, L=None,$/;"	kind:member	line:1277
+__init__	../pymrio/core/mriosystem.py	/^    def __init__(self, name, F=None, FY=None, S=None, M=None, D_cba=None,$/;"	kind:member	line:595
+__init__	../pymrio/tools/iometadata.py	/^    def __init__(self,$/;"	kind:member	line:16
+__init__.py	../pymrio/__init__.py	1;"	kind:file	line:1
+__init__.py	../pymrio/core/__init__.py	1;"	kind:file	line:1
+__init__.py	../pymrio/mrio_models/__init__.py	1;"	kind:file	line:1
+__init__.py	../pymrio/mrio_models/exio20/concordance/__init__.py	1;"	kind:file	line:1
+__init__.py	../pymrio/mrio_models/exio20/misc/__init__.py	1;"	kind:file	line:1
+__init__.py	../pymrio/mrio_models/test_mrio/__init__.py	1;"	kind:file	line:1
+__init__.py	../pymrio/mrio_models/test_mrio/concordance/__init__.py	1;"	kind:file	line:1
+__init__.py	../pymrio/tools/__init__.py	1;"	kind:file	line:1
+__parse_exiobase3	../pymrio/tools/ioparser.py	/^def __parse_exiobase3(zip_file,$/;"	kind:function	line:641
+__repr__	../pymrio/tools/iometadata.py	/^    def __repr__(self):$/;"	kind:member	line:117
+__str__	../pymrio/core/mriosystem.py	/^    def __str__(self):$/;"	kind:member	line:1318
+__str__	../pymrio/core/mriosystem.py	/^    def __str__(self):$/;"	kind:member	line:632
+__str__	../pymrio/core/mriosystem.py	/^    def __str__(self, startstr='System with: '):$/;"	kind:member	line:60
+__str__	../pymrio/tools/iometadata.py	/^    def __str__(self):$/;"	kind:member	line:120
+__version__	../pymrio/version.py	/^__version__ = '0.3.6'$/;"	kind:variable	line:1
+_add_fileio	../pymrio/tools/iometadata.py	/^    def _add_fileio(self, entry):$/;"	kind:member	line:147
+_add_history	../pymrio/tools/iometadata.py	/^    def _add_history(self, entry_type, entry):$/;"	kind:member	line:155
+_add_modify	../pymrio/tools/iometadata.py	/^    def _add_modify(self, entry):$/;"	kind:member	line:151
+_categories	../pymrio/tests/test_math.py	/^        _categories = ['final demand']$/;"	kind:variable	line:147
+_download_urls	../pymrio/tools/iodownloader.py	/^def _download_urls(url_list, storage_folder, overwrite_existing,$/;"	kind:function	line:69
+_get_MRIO_system	../pymrio/tools/ioparser.py	/^def _get_MRIO_system(path):$/;"	kind:function	line:394
+_get_history_type	../pymrio/tools/iometadata.py	/^    def _get_history_type(self, history_type):$/;"	kind:member	line:189
+_get_url_datafiles	../pymrio/tools/iodownloader.py	/^def _get_url_datafiles(url_db_view, url_db_content,$/;"	kind:function	line:32
+_load_all_ini_based_io	../pymrio/core/fileio.py	/^def _load_all_ini_based_io(path, **kwargs):$/;"	kind:function	line:148
+_load_ini_based_io	../pymrio/core/fileio.py	/^def _load_ini_based_io(path, recursive=False, ini=None,$/;"	kind:function	line:171
+_pymriopath	../pymrio/tests/test_aggregation.py	/^_pymriopath = os.path.dirname(os.path.abspath(__file__))$/;"	kind:variable	line:15
+_pymriopath	../pymrio/tests/test_core.py	/^_pymriopath = os.path.dirname(os.path.abspath(__file__))$/;"	kind:variable	line:8
+_pymriopath	../pymrio/tests/test_integration.py	/^_pymriopath = os.path.dirname(os.path.abspath(__file__))$/;"	kind:variable	line:11
+_pymriopath	../pymrio/tests/test_math.py	/^_pymriopath = os.path.dirname(os.path.abspath(__file__))$/;"	kind:variable	line:11
+_pymriopath	../pymrio/tests/test_util.py	/^_pymriopath = os.path.dirname(os.path.abspath(__file__))$/;"	kind:variable	line:11
+_read_content	../pymrio/tools/iometadata.py	/^    def _read_content(self):$/;"	kind:member	line:249
+_regions	../pymrio/tests/test_math.py	/^        _regions = ['reg1', 'reg2']$/;"	kind:variable	line:128
+_rep	../pymrio/tools/ioutil.py	/^    def _rep(ll, ii, vv): ll[ii] = vv$/;"	kind:function	line:477
+_sectors	../pymrio/tests/test_math.py	/^        _sectors = ['sector1', 'sector2', 'sector3']$/;"	kind:variable	line:127
+_time	../pymrio/tools/iometadata.py	/^    def _time(self):$/;"	kind:member	line:246
+_warn_deprecation	../pymrio/core/mriosystem.py	/^def _warn_deprecation(message):$/;"	kind:function	line:46
+aggregate	../pymrio/core/mriosystem.py	/^    def aggregate(self, region_agg=None, sector_agg=None,$/;"	kind:member	line:1557
+author	../setup.py	/^    author='Konstantin Stadler',$/;"	kind:variable	line:12
+author_email	../setup.py	/^    author_email='konstantin.stadler@ntnu.no',$/;"	kind:variable	line:13
+build_agg_matrix	../pymrio/tools/ioutil.py	/^def build_agg_matrix(agg_vector, pos_dict=None):$/;"	kind:function	line:65
+build_agg_vec	../pymrio/tools/ioutil.py	/^def build_agg_vec(agg_vec, **source):$/;"	kind:function	line:382
+calc_A	../pymrio/tools/iomath.py	/^def calc_A(Z, x):$/;"	kind:function	line:94
+calc_F	../pymrio/tools/iomath.py	/^def calc_F(S, x):$/;"	kind:function	line:178
+calc_L	../pymrio/tools/iomath.py	/^def calc_L(A):$/;"	kind:function	line:133
+calc_M	../pymrio/tools/iomath.py	/^def calc_M(S, L):$/;"	kind:function	line:199
+calc_S	../pymrio/tools/iomath.py	/^def calc_S(F, x):$/;"	kind:function	line:157
+calc_Z	../pymrio/tools/iomath.py	/^def calc_Z(A, x):$/;"	kind:function	line:64
+calc_accounts	../pymrio/tools/iomath.py	/^def calc_accounts(S, L, Y, nr_sectors):$/;"	kind:function	line:278
+calc_all	../pymrio/core/mriosystem.py	/^    def calc_all(self):$/;"	kind:member	line:1328
+calc_e	../pymrio/tools/iomath.py	/^def calc_e(M, Y):$/;"	kind:function	line:220
+calc_extensions	../pymrio/core/mriosystem.py	/^    def calc_extensions(self, extensions=None, Y_agg=None):$/;"	kind:member	line:1379
+calc_system	../pymrio/core/mriosystem.py	/^    def calc_system(self):$/;"	kind:member	line:1339
+calc_system	../pymrio/core/mriosystem.py	/^    def calc_system(self, x, Y_agg, L=None, population=None):$/;"	kind:member	line:637
+calc_x	../pymrio/tools/iomath.py	/^def calc_x(Z, Y):$/;"	kind:function	line:18
+calc_x_from_L	../pymrio/tools/iomath.py	/^def calc_x_from_L(L, y):$/;"	kind:function	line:41
+change_meta	../pymrio/tools/iometadata.py	/^    def change_meta(self, para, new_value, log=True):$/;"	kind:member	line:209
+classifiers	../setup.py	/^    classifiers=[$/;"	kind:variable	line:27
+clean	../pymrio/core/fileio.py	/^                def clean(varStr):$/;"	kind:function	line:409
+clean	../pymrio/core/fileio.py	/^    def clean(varStr):$/;"	kind:function	line:38
+clean	../pymrio/core/mriosystem.py	/^                def clean(varStr):$/;"	kind:function	line:1059
+columns	../pymrio/tests/test_math.py	/^                                   columns=['sec1', 'sec2'],$/;"	kind:variable	line:106
+columns	../pymrio/tests/test_math.py	/^                                 columns=['sec1', 'sec2'],$/;"	kind:variable	line:114
+columns	../pymrio/tests/test_math.py	/^                               columns=['indout'],$/;"	kind:variable	line:98
+columns	../pymrio/tests/test_math.py	/^                            columns=['indout'],$/;"	kind:variable	line:77
+columns	../pymrio/tests/test_math.py	/^                            columns=['sec1', 'sec2'],$/;"	kind:variable	line:88
+columns	../pymrio/tests/test_math.py	/^                 columns=['sequence', 'value', 'contribution', 'path'],$/;"	kind:variable	line:290
+columns	../pymrio/tests/test_math.py	/^                 columns=_Z_multiindex,$/;"	kind:variable	line:220
+columns	../pymrio/tests/test_math.py	/^                 columns=_Z_multiindex,$/;"	kind:variable	line:229
+columns	../pymrio/tests/test_math.py	/^                 columns=_Z_multiindex,$/;"	kind:variable	line:238
+columns	../pymrio/tests/test_math.py	/^                 columns=_Z_multiindex,$/;"	kind:variable	line:247
+columns	../pymrio/tests/test_math.py	/^                 columns=_Z_multiindex,$/;"	kind:variable	line:256
+columns	../pymrio/tests/test_math.py	/^                 columns=_Z_multiindex,$/;"	kind:variable	line:265
+columns	../pymrio/tests/test_math.py	/^                columns=_Z_multiindex,$/;"	kind:variable	line:171
+columns	../pymrio/tests/test_math.py	/^               columns=['indout'],$/;"	kind:variable	line:210
+columns	../pymrio/tests/test_math.py	/^               columns=_Y_multiindex,$/;"	kind:variable	line:161
+columns	../pymrio/tests/test_math.py	/^               columns=_Z_multiindex,$/;"	kind:variable	line:143
+columns	../pymrio/tests/test_math.py	/^               columns=_Z_multiindex,$/;"	kind:variable	line:185
+columns	../pymrio/tests/test_math.py	/^               columns=_Z_multiindex,$/;"	kind:variable	line:198
+columns	../pymrio/tests/test_math.py	/^            columns=['fi'],$/;"	kind:variable	line:67
+columns	../pymrio/tests/test_math.py	/^            columns=['sec1', 'sec2'],$/;"	kind:variable	line:45
+columns	../pymrio/tests/test_math.py	/^            columns=['sec1', 'sec2'],$/;"	kind:variable	line:56
+concate_extension	../pymrio/tools/ioutil.py	/^def concate_extension(*extensions, name):$/;"	kind:function	line:247
+constants.py	../pymrio/core/constants.py	1;"	kind:file	line:1
+copy	../pymrio/core/mriosystem.py	/^    def copy(self, new_name=None):$/;"	kind:member	line:107
+csv_test_files_content	../pymrio/tests/test_util.py	/^def csv_test_files_content():$/;"	kind:function	line:22
+data	../pymrio/tests/test_math.py	/^                data=[$/;"	kind:variable	line:166
+data	../pymrio/tests/test_math.py	/^                data=[$/;"	kind:variable	line:176
+data	../pymrio/tests/test_math.py	/^                data=[$/;"	kind:variable	line:189
+data	../pymrio/tests/test_math.py	/^                data=[$/;"	kind:variable	line:215
+data	../pymrio/tests/test_math.py	/^                data=[$/;"	kind:variable	line:224
+data	../pymrio/tests/test_math.py	/^                data=[$/;"	kind:variable	line:233
+data	../pymrio/tests/test_math.py	/^                data=[$/;"	kind:variable	line:242
+data	../pymrio/tests/test_math.py	/^                data=[$/;"	kind:variable	line:251
+data	../pymrio/tests/test_math.py	/^                data=[$/;"	kind:variable	line:260
+data	../pymrio/tests/test_math.py	/^                data=[$/;"	kind:variable	line:269
+data	../pymrio/tests/test_math.py	/^               data=[$/;"	kind:variable	line:134
+data	../pymrio/tests/test_math.py	/^               data=[$/;"	kind:variable	line:152
+data	../pymrio/tests/test_math.py	/^               data=[$/;"	kind:variable	line:202
+data	../pymrio/tests/test_math.py	/^            data=A_arr,$/;"	kind:variable	line:54
+data	../pymrio/tests/test_math.py	/^            data=Z_arr,$/;"	kind:variable	line:43
+data	../pymrio/tests/test_math.py	/^            data=fd_arr,$/;"	kind:variable	line:65
+description	../pymrio/tools/iometadata.py	/^    def description(self):$/;"	kind:member	line:194
+description	../setup.py	/^    description=($/;"	kind:variable	line:7
+diag_stressor	../pymrio/core/mriosystem.py	/^    def diag_stressor(self, stressor, name=None):$/;"	kind:member	line:1163
+diagonalize_blocks	../pymrio/tools/ioutil.py	/^def diagonalize_blocks(arr, blocksize):$/;"	kind:function	line:144
+download_eora26	../pymrio/tools/iodownloader.py	/^def download_eora26(storage_folder, years=None, prices=['bp'],$/;"	kind:function	line:187
+download_exiobase1	../pymrio/tools/iodownloader.py	/^def download_exiobase1():$/;"	kind:function	line:293
+download_exiobase2	../pymrio/tools/iodownloader.py	/^def download_exiobase2():$/;"	kind:function	line:306
+download_wiod2013	../pymrio/tools/iodownloader.py	/^def download_wiod2013(storage_folder, years=None, overwrite_existing=False,$/;"	kind:function	line:115
+dtype	../pymrio/tests/test_math.py	/^                 dtype=('object')$/;"	kind:variable	line:291
+dtype	../pymrio/tests/test_math.py	/^                dtype=('float64')$/;"	kind:variable	line:172
+dtype	../pymrio/tests/test_math.py	/^               dtype=('float64')$/;"	kind:variable	line:144
+dtype	../pymrio/tests/test_math.py	/^               dtype=('float64')$/;"	kind:variable	line:162
+dtype	../pymrio/tests/test_math.py	/^               dtype=('float64')$/;"	kind:variable	line:212
+example_csv_content	../pymrio/tests/test_util.py	/^    class example_csv_content():$/;"	kind:class	line:28
+extract_paths	../pymrio/tools/iomath.py	/^def extract_paths(S, A, y, M, Tmax, tolerance, max_npaths):$/;"	kind:function	line:397
+extract_paths_rc	../pymrio/tools/iomath.py	/^def extract_paths_rc(paths, count, sequence, val_wo_S, T, S, A, y, M, Tmax,$/;"	kind:function	line:409
+factor_inputs	../pymrio/tests/test_integration.py	/^        class factor_inputs():$/;"	kind:class	line:25
+fd_arr	../pymrio/tests/test_math.py	/^        fd_arr = np.array([$/;"	kind:variable	line:60
+fd_df	../pymrio/tests/test_math.py	/^        fd_df = pd.DataFrame($/;"	kind:variable	line:64
+file_io_history	../pymrio/tools/iometadata.py	/^    def file_io_history(self):$/;"	kind:member	line:185
+file_name_nr	../pymrio/core/mriosystem.py	/^                def file_name_nr(a, c):$/;"	kind:function	line:1069
+fileio.py	../pymrio/core/fileio.py	1;"	kind:file	line:1
+find_first_number	../pymrio/tools/ioutil.py	/^def find_first_number(ll):$/;"	kind:function	line:493
+fix_testmrio	../pymrio/tests/test_core.py	/^def fix_testmrio():$/;"	kind:function	line:15
+generic_exiobase_parser	../pymrio/tools/ioparser.py	/^def generic_exiobase_parser(exio_files, system=None):$/;"	kind:function	line:251
+get_DataFrame	../pymrio/core/mriosystem.py	/^    def get_DataFrame(self, data=False, with_unit=True, with_population=True):$/;"	kind:member	line:300
+get_Y_categories	../pymrio/core/mriosystem.py	/^    def get_Y_categories(self, entries=None):$/;"	kind:member	line:128
+get_exiobase_files	../pymrio/tools/ioparser.py	/^def get_exiobase_files(path, coefficients=True):$/;"	kind:function	line:178
+get_exiobase_version	../pymrio/tools/ioparser.py	/^def get_exiobase_version(filename):$/;"	kind:function	line:163
+get_extensions	../pymrio/core/mriosystem.py	/^    def get_extensions(self, data=False):$/;"	kind:member	line:1471
+get_index	../pymrio/core/mriosystem.py	/^    def get_index(self, as_dict=False, grouping_pattern=None):$/;"	kind:member	line:163
+get_regions	../pymrio/core/mriosystem.py	/^    def get_regions(self, entries=None):$/;"	kind:member	line:219
+get_repo_content	../pymrio/tools/ioutil.py	/^def get_repo_content(path):$/;"	kind:function	line:44
+get_row_data	../pymrio/core/mriosystem.py	/^    def get_row_data(self, row, name=None):$/;"	kind:member	line:1139
+get_rows	../pymrio/core/mriosystem.py	/^    def get_rows(self):$/;"	kind:member	line:1124
+get_sectors	../pymrio/core/mriosystem.py	/^    def get_sectors(self, entries=None):$/;"	kind:member	line:260
+header_rows	../pymrio/tests/test_util.py	/^                      header_rows=1,$/;"	kind:variable	line:34
+header_rows	../pymrio/tests/test_util.py	/^                      header_rows=1,$/;"	kind:variable	line:40
+header_rows	../pymrio/tests/test_util.py	/^                      header_rows=1,$/;"	kind:variable	line:46
+header_rows	../pymrio/tests/test_util.py	/^                      header_rows=2,$/;"	kind:variable	line:53
+header_rows	../pymrio/tests/test_util.py	/^                      header_rows=3,$/;"	kind:variable	line:74
+header_rows	../pymrio/tests/test_util.py	/^                      header_rows=None,$/;"	kind:variable	line:60
+header_rows	../pymrio/tests/test_util.py	/^                      header_rows=None,$/;"	kind:variable	line:67
+history	../pymrio/tools/iometadata.py	/^    def history(self):$/;"	kind:member	line:170
+include_package_data	../setup.py	/^    include_package_data=True,$/;"	kind:variable	line:16
+index	../pymrio/tests/test_math.py	/^                                   index=['total labor'],$/;"	kind:variable	line:105
+index	../pymrio/tests/test_math.py	/^                                 index=['total labor'],$/;"	kind:variable	line:113
+index	../pymrio/tests/test_math.py	/^                               index=['sec1', 'sec2'],$/;"	kind:variable	line:97
+index	../pymrio/tests/test_math.py	/^                            index=['sec1', 'sec2'],$/;"	kind:variable	line:76
+index	../pymrio/tests/test_math.py	/^                            index=['sec1', 'sec2'],$/;"	kind:variable	line:87
+index	../pymrio/tests/test_math.py	/^                 index=['TOTAL', 'REST', 4, 3, 7, 1, 2, 5, 6],$/;"	kind:variable	line:289
+index	../pymrio/tests/test_math.py	/^                 index=['ext_type_1', 'ext_type_2'],$/;"	kind:variable	line:219
+index	../pymrio/tests/test_math.py	/^                 index=['ext_type_1', 'ext_type_2'],$/;"	kind:variable	line:228
+index	../pymrio/tests/test_math.py	/^                 index=['ext_type_1', 'ext_type_2'],$/;"	kind:variable	line:237
+index	../pymrio/tests/test_math.py	/^                 index=['ext_type_1', 'ext_type_2'],$/;"	kind:variable	line:246
+index	../pymrio/tests/test_math.py	/^                 index=['ext_type_1', 'ext_type_2'],$/;"	kind:variable	line:255
+index	../pymrio/tests/test_math.py	/^                 index=['ext_type_1', 'ext_type_2'],$/;"	kind:variable	line:264
+index	../pymrio/tests/test_math.py	/^                index=['ext_type_1', 'ext_type_2'],$/;"	kind:variable	line:170
+index	../pymrio/tests/test_math.py	/^               index=_Z_multiindex,$/;"	kind:variable	line:142
+index	../pymrio/tests/test_math.py	/^               index=_Z_multiindex,$/;"	kind:variable	line:160
+index	../pymrio/tests/test_math.py	/^               index=_Z_multiindex,$/;"	kind:variable	line:184
+index	../pymrio/tests/test_math.py	/^               index=_Z_multiindex,$/;"	kind:variable	line:197
+index	../pymrio/tests/test_math.py	/^               index=_Z_multiindex,$/;"	kind:variable	line:211
+index	../pymrio/tests/test_math.py	/^            index=['sec1', 'sec2'],$/;"	kind:variable	line:44
+index	../pymrio/tests/test_math.py	/^            index=['sec1', 'sec2'],$/;"	kind:variable	line:55
+index	../pymrio/tests/test_math.py	/^            index=['sec1', 'sec2'],$/;"	kind:variable	line:66
+index_col	../pymrio/tests/test_util.py	/^                      index_col=1),$/;"	kind:variable	line:41
+index_col	../pymrio/tests/test_util.py	/^                      index_col=1),$/;"	kind:variable	line:47
+index_col	../pymrio/tests/test_util.py	/^                      index_col=1),$/;"	kind:variable	line:54
+index_col	../pymrio/tests/test_util.py	/^                      index_col=2),$/;"	kind:variable	line:35
+index_col	../pymrio/tests/test_util.py	/^                      index_col=2),$/;"	kind:variable	line:75
+index_col	../pymrio/tests/test_util.py	/^                      index_col=None),$/;"	kind:variable	line:61
+index_col	../pymrio/tests/test_util.py	/^                      index_col=None),$/;"	kind:variable	line:68
+iodownloader.py	../pymrio/tools/iodownloader.py	1;"	kind:file	line:1
+iomath.py	../pymrio/tools/iomath.py	1;"	kind:file	line:1
+iometadata.py	../pymrio/tools/iometadata.py	1;"	kind:file	line:1
+ioparser.py	../pymrio/tools/ioparser.py	1;"	kind:file	line:1
+ioutil.py	../pymrio/tools/ioutil.py	1;"	kind:file	line:1
+is_vector	../pymrio/tools/ioutil.py	/^def is_vector(inp):$/;"	kind:function	line:17
+labcoeff_arr	../pymrio/tests/test_math.py	/^        labcoeff_arr = np.array([$/;"	kind:variable	line:101
+labcoeff_df	../pymrio/tests/test_math.py	/^        labcoeff_df = pd.DataFrame(data=labcoeff_arr,$/;"	kind:variable	line:104
+labtot_arr	../pymrio/tests/test_math.py	/^        labtot_arr = np.array([$/;"	kind:variable	line:109
+labtot_df	../pymrio/tests/test_math.py	/^        labtot_df = pd.DataFrame(data=labtot_arr,$/;"	kind:variable	line:112
+load	../pymrio/core/fileio.py	/^def load(path, include_core=True):$/;"	kind:function	line:64
+load_all	../pymrio/core/fileio.py	/^def load_all(path, include_core=True, subfolders=None):$/;"	kind:function	line:30
+load_test	../pymrio/core/fileio.py	/^def load_test():$/;"	kind:function	line:417
+long_description	../setup.py	/^    long_description=open('README.rst').read(),$/;"	kind:variable	line:10
+metadata	../pymrio/tools/iometadata.py	/^    def metadata(self):$/;"	kind:member	line:166
+modification_history	../pymrio/tools/iometadata.py	/^    def modification_history(self):$/;"	kind:member	line:175
+mriosystem.py	../pymrio/core/mriosystem.py	1;"	kind:file	line:1
+name	../pymrio/core/mriosystem.py	/^    def name(self):$/;"	kind:member	line:1322
+name	../pymrio/tools/iometadata.py	/^    def name(self):$/;"	kind:member	line:198
+name	../setup.py	/^    name='pymrio',$/;"	kind:variable	line:6
+names	../pymrio/tests/test_math.py	/^                names=[u'region', u'category'])$/;"	kind:variable	line:150
+names	../pymrio/tests/test_math.py	/^            names=[u'region', u'sector'])$/;"	kind:variable	line:131
+note	../pymrio/tools/iometadata.py	/^    def note(self, entry):$/;"	kind:member	line:140
+note_history	../pymrio/tools/iometadata.py	/^    def note_history(self):$/;"	kind:member	line:180
+package_data	../setup.py	/^    package_data={$/;"	kind:variable	line:17
+packages	../setup.py	/^    packages=find_packages(),$/;"	kind:variable	line:15
+parse_eora26	../pymrio/tools/ioparser.py	/^def parse_eora26(path, year=None, price='bp', country_names='eora'):$/;"	kind:function	line:1621
+parse_exio_ext	../pymrio/tools/ioparser.py	/^def parse_exio_ext(ext_file, index_col, name, drop_compartment=True,$/;"	kind:function	line:65
+parse_exiobase1	../pymrio/tools/ioparser.py	/^def parse_exiobase1(path):$/;"	kind:function	line:409
+parse_exiobase2	../pymrio/tools/ioparser.py	/^def parse_exiobase2(path, charact=True, popvector='exio2'):$/;"	kind:function	line:440
+parse_wiod	../pymrio/tools/ioparser.py	/^def parse_wiod(path, year=None, names=('isic', 'c_codes'),$/;"	kind:function	line:925
+paths	../pymrio/tests/test_math.py	/^        paths = pd.DataFrame($/;"	kind:variable	line:268
+plot_account	../pymrio/core/mriosystem.py	/^    def plot_account(self, row, per_capita=False, sector=None,$/;"	kind:member	line:795
+read_first_lines	../pymrio/tools/ioutil.py	/^    def read_first_lines(filehandle):$/;"	kind:function	line:539
+recalc_M	../pymrio/tools/iomath.py	/^def recalc_M(S, D_cba, Y, nr_sectors):$/;"	kind:function	line:243
+regions	../pymrio/tests/test_core.py	/^        regions = ['reg1', 'reg2', 'reg3', 'reg4', 'reg5', 'reg6']$/;"	kind:variable	line:28
+remove_extension	../pymrio/core/mriosystem.py	/^    def remove_extension(self, ext=None):$/;"	kind:member	line:1831
+rename_Y_categories	../pymrio/core/mriosystem.py	/^    def rename_Y_categories(self, Y_categories):$/;"	kind:member	line:505
+rename_regions	../pymrio/core/mriosystem.py	/^    def rename_regions(self, regions):$/;"	kind:member	line:446
+rename_sectors	../pymrio/core/mriosystem.py	/^    def rename_sectors(self, sectors):$/;"	kind:member	line:476
+report_accounts	../pymrio/core/mriosystem.py	/^    def report_accounts(self, path, per_region=True, per_capita=False,$/;"	kind:member	line:951
+report_accounts	../pymrio/core/mriosystem.py	/^    def report_accounts(self, path, per_region=True,$/;"	kind:member	line:1424
+reset_all_full	../pymrio/core/mriosystem.py	/^    def reset_all_full(self):$/;"	kind:member	line:1495
+reset_all_to_coefficients	../pymrio/core/mriosystem.py	/^    def reset_all_to_coefficients(self):$/;"	kind:member	line:1519
+reset_all_to_flows	../pymrio/core/mriosystem.py	/^    def reset_all_to_flows(self):$/;"	kind:member	line:1508
+reset_full	../pymrio/core/mriosystem.py	/^    def reset_full(self):$/;"	kind:member	line:67
+reset_to_coefficients	../pymrio/core/mriosystem.py	/^    def reset_to_coefficients(self):$/;"	kind:member	line:91
+reset_to_flows	../pymrio/core/mriosystem.py	/^    def reset_to_flows(self):$/;"	kind:member	line:79
+results	../pymrio/tests/test_integration.py	/^    class results():$/;"	kind:class	line:24
+save	../pymrio/core/mriosystem.py	/^    def save(self, path, table_format='txt', sep='\\t',$/;"	kind:member	line:340
+save	../pymrio/tools/iometadata.py	/^    def save(self, location=None):$/;"	kind:member	line:260
+save_all	../pymrio/core/mriosystem.py	/^    def save_all(self, path, table_format='txt', sep='\\t',$/;"	kind:member	line:1530
+sectors	../pymrio/tests/test_core.py	/^        sectors = ['food',$/;"	kind:variable	line:20
+sep	../pymrio/tests/test_util.py	/^                      sep=',',$/;"	kind:variable	line:33
+sep	../pymrio/tests/test_util.py	/^                      sep=',',$/;"	kind:variable	line:39
+sep	../pymrio/tests/test_util.py	/^                      sep=';',$/;"	kind:variable	line:45
+sep	../pymrio/tests/test_util.py	/^                      sep=';',$/;"	kind:variable	line:52
+sep	../pymrio/tests/test_util.py	/^                      sep=';',$/;"	kind:variable	line:66
+sep	../pymrio/tests/test_util.py	/^                      sep=';',$/;"	kind:variable	line:73
+sep	../pymrio/tests/test_util.py	/^                      sep='|',$/;"	kind:variable	line:59
+set_block	../pymrio/tools/ioutil.py	/^def set_block(arr, arr_block):$/;"	kind:function	line:194
+set_index	../pymrio/core/mriosystem.py	/^    def set_index(self, index):$/;"	kind:member	line:213
+setup.py	../setup.py	1;"	kind:file	line:1
+sniff_csv_format	../pymrio/tools/ioutil.py	/^def sniff_csv_format(csv_file,$/;"	kind:function	line:505
+system	../pymrio/tools/iometadata.py	/^    def system(self):$/;"	kind:member	line:202
+td_IO_Data_Miller	../pymrio/tests/test_math.py	/^def td_IO_Data_Miller():$/;"	kind:function	line:31
+td_small_MRIO	../pymrio/tests/test_math.py	/^def td_small_MRIO():$/;"	kind:function	line:120
+td_testmrio	../pymrio/tests/test_integration.py	/^def td_testmrio():$/;"	kind:function	line:18
+test_SPA	../pymrio/tests/test_math.py	/^def test_SPA(td_small_MRIO):$/;"	kind:function	line:471
+test_aggreation_regions	../pymrio/tests/test_aggregation.py	/^def test_aggreation_regions():$/;"	kind:function	line:21
+test_aggregation.py	../pymrio/tests/test_aggregation.py	1;"	kind:file	line:1
+test_all	../pymrio/tests/test_integration.py	/^def test_all(td_testmrio):$/;"	kind:function	line:33
+test_build_agg_matrix	../pymrio/tests/test_util.py	/^def test_build_agg_matrix():$/;"	kind:function	line:103
+test_build_agg_vec	../pymrio/tests/test_util.py	/^def test_build_agg_vec():$/;"	kind:function	line:117
+test_calc_A_MRIO	../pymrio/tests/test_math.py	/^def test_calc_A_MRIO(td_small_MRIO):$/;"	kind:function	line:407
+test_calc_A_arr	../pymrio/tests/test_math.py	/^def test_calc_A_arr(td_IO_Data_Miller):$/;"	kind:function	line:333
+test_calc_A_df	../pymrio/tests/test_math.py	/^def test_calc_A_df(td_IO_Data_Miller):$/;"	kind:function	line:326
+test_calc_F_arr	../pymrio/tests/test_math.py	/^def test_calc_F_arr(td_IO_Data_Miller):$/;"	kind:function	line:370
+test_calc_F_df	../pymrio/tests/test_math.py	/^def test_calc_F_df(td_IO_Data_Miller):$/;"	kind:function	line:378
+test_calc_L_MRIO	../pymrio/tests/test_math.py	/^def test_calc_L_MRIO(td_small_MRIO):$/;"	kind:function	line:414
+test_calc_L_arr	../pymrio/tests/test_math.py	/^def test_calc_L_arr(td_IO_Data_Miller):$/;"	kind:function	line:347
+test_calc_L_df	../pymrio/tests/test_math.py	/^def test_calc_L_df(td_IO_Data_Miller):$/;"	kind:function	line:340
+test_calc_M_MRIO	../pymrio/tests/test_math.py	/^def test_calc_M_MRIO(td_small_MRIO):$/;"	kind:function	line:428
+test_calc_S_MRIO	../pymrio/tests/test_math.py	/^def test_calc_S_MRIO(td_small_MRIO):$/;"	kind:function	line:421
+test_calc_S_arr	../pymrio/tests/test_math.py	/^def test_calc_S_arr(td_IO_Data_Miller):$/;"	kind:function	line:385
+test_calc_S_df	../pymrio/tests/test_math.py	/^def test_calc_S_df(td_IO_Data_Miller):$/;"	kind:function	line:393
+test_calc_Z_arr	../pymrio/tests/test_math.py	/^def test_calc_Z_arr(td_IO_Data_Miller):$/;"	kind:function	line:319
+test_calc_Z_df	../pymrio/tests/test_math.py	/^def test_calc_Z_df(td_IO_Data_Miller):$/;"	kind:function	line:312
+test_calc_accounts_MRIO	../pymrio/tests/test_math.py	/^def test_calc_accounts_MRIO(td_small_MRIO):$/;"	kind:function	line:435
+test_calc_x_MRIO	../pymrio/tests/test_math.py	/^def test_calc_x_MRIO(td_small_MRIO):$/;"	kind:function	line:400
+test_calc_x_arr	../pymrio/tests/test_math.py	/^def test_calc_x_arr(td_IO_Data_Miller):$/;"	kind:function	line:305
+test_calc_x_df	../pymrio/tests/test_math.py	/^def test_calc_x_df(td_IO_Data_Miller):$/;"	kind:function	line:298
+test_calc_x_from_L_arr	../pymrio/tests/test_math.py	/^def test_calc_x_from_L_arr(td_IO_Data_Miller):$/;"	kind:function	line:362
+test_calc_x_from_L_df	../pymrio/tests/test_math.py	/^def test_calc_x_from_L_df(td_IO_Data_Miller):$/;"	kind:function	line:355
+test_contents	../pymrio/tests/test_util.py	/^        test_contents = [$/;"	kind:variable	line:29
+test_copy	../pymrio/tests/test_core.py	/^def test_copy(fix_testmrio):$/;"	kind:function	line:33
+test_copy_and_extensions	../pymrio/tests/test_core.py	/^def test_copy_and_extensions(fix_testmrio):$/;"	kind:function	line:106
+test_core.py	../pymrio/tests/test_core.py	1;"	kind:file	line:1
+test_dev_read	../pymrio/tests/test_util.py	/^def test_dev_read(csv_test_files_content):$/;"	kind:function	line:90
+test_find_first_number	../pymrio/tests/test_util.py	/^def test_find_first_number():$/;"	kind:function	line:80
+test_get_index	../pymrio/tests/test_core.py	/^def test_get_index(fix_testmrio):$/;"	kind:function	line:51
+test_get_regions	../pymrio/tests/test_core.py	/^def test_get_regions(fix_testmrio):$/;"	kind:function	line:102
+test_get_sectors	../pymrio/tests/test_core.py	/^def test_get_sectors(fix_testmrio):$/;"	kind:function	line:90
+test_integration.py	../pymrio/tests/test_integration.py	1;"	kind:file	line:1
+test_math.py	../pymrio/tests/test_math.py	1;"	kind:file	line:1
+test_numerical_aggreation_sectors	../pymrio/tests/test_aggregation.py	/^def test_numerical_aggreation_sectors():$/;"	kind:function	line:81
+test_set_index	../pymrio/tests/test_core.py	/^def test_set_index(fix_testmrio):$/;"	kind:function	line:82
+test_total_agg	../pymrio/tests/test_aggregation.py	/^def test_total_agg():$/;"	kind:function	line:135
+test_util.py	../pymrio/tests/test_util.py	1;"	kind:file	line:1
+test_wrong_inputs	../pymrio/tests/test_aggregation.py	/^def test_wrong_inputs():$/;"	kind:function	line:105
+testmrio	../pymrio/tests/test_core.py	/^        testmrio = pymrio.load_test()$/;"	kind:variable	line:19
+unique_element	../pymrio/tools/ioutil.py	/^def unique_element(ll):$/;"	kind:function	line:235
+url	../setup.py	/^    url='https:\/\/github.com\/konstantinstadler\/pymrio',$/;"	kind:variable	line:11
+version	../pymrio/tools/iometadata.py	/^    def version(self):$/;"	kind:member	line:206
+version	../setup.py	/^    version=__version__,  # noqa$/;"	kind:variable	line:14
+version.py	../pymrio/version.py	1;"	kind:file	line:1
+x	../pymrio/tests/test_math.py	/^        x = pd.DataFrame($/;"	kind:variable	line:201
+x_arr	../pymrio/tests/test_math.py	/^        x_arr = np.array([$/;"	kind:variable	line:71
+x_df	../pymrio/tests/test_math.py	/^        x_df = pd.DataFrame(data=x_arr,$/;"	kind:variable	line:75
+xnew_arr	../pymrio/tests/test_math.py	/^        xnew_arr = np.array([$/;"	kind:variable	line:92
+xnew_df	../pymrio/tests/test_math.py	/^        xnew_df = pd.DataFrame(data=xnew_arr,$/;"	kind:variable	line:96
