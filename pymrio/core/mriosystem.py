@@ -1870,9 +1870,12 @@ class IOSystem(CoreSystem):
             filename=None,
             max_npaths=1000,
             index=None):
-        """ Returns a list of most contributing paths following the structural path analysis algorithm of Peters and Hertwich (2006, ESR) for a unit demand in a single sector.
+        """ Returns a list of most contributing paths following the structural
+        path analysis algorithm of Peters and Hertwich (2006, ESR) for a unit
+        demand in a single sector.
 
-        Based on a MATLAB version written by Yasushi Kondo, initially written by Glen Peters.
+        Based on a MATLAB version written by Yasushi Kondo, initially written
+        by Glen Peters.
 
         Parameters
         ----------
@@ -1896,7 +1899,8 @@ class IOSystem(CoreSystem):
         max_npaths : int
             maximum number of paths
         index : list or any iterable
-            list that can be forced to replace an existing index (corresponding to the stressor object)
+            list that can be forced to replace an existing index (corresponding
+            to the stressor object)
 
         Returns
         -------
@@ -1906,7 +1910,11 @@ class IOSystem(CoreSystem):
         ---
         Use with the test_mrio after calc_all() has been performed:
 
-        paths = test_mrio.SPA(stressor={'ext_name':'emissions', 'substance':'emission_type1', 'compartment':'air'}, region='reg1', sector='food', threshold=0.00001)
+        paths = test_mrio.SPA(stressor={'ext_name':'emissions',
+                                        'index':('emission_type1','air')},
+                              region='reg1',
+                              sector='food',
+                              threshold=0.00001)
 
         author: Thomas Gibon <t.gibon@gmail.com>
 
