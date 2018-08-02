@@ -366,7 +366,7 @@ def SPA(S, A, y, Tmax, threshold, M, max_npaths=1000):
     if M is None:
         M = calc_M(S, calc_L(A))
 
-    #if type(A) == pd.core.frame.DataFrame:
+    # if type(A) == pd.core.frame.DataFrame:
     index = A.index
     A = A.values
 
@@ -399,13 +399,13 @@ def extract_paths(S, A, y, M, Tmax, tolerance, max_npaths):
     paths = {}
 
     paths, count = extract_paths_rc(paths, 0, [], np.nan, 0, S, A, y, M, Tmax,
-                                    tolerance)
+                                        tolerance, max_npaths)
 
     return paths, count
 
 
 def extract_paths_rc(paths, count, sequence, val_wo_S, T, S, A, y, M, Tmax,
-                     tolerance):
+                     tolerance, max_npaths):
     '''
     Recursion
 
@@ -415,7 +415,12 @@ def extract_paths_rc(paths, count, sequence, val_wo_S, T, S, A, y, M, Tmax,
     intermediate consumption vector,
     tier,
     stressor vector,
-    intermediate consumption matrix
+    intermediate consumption matrix,
+    final demand,
+    multipliers,
+    max tiers,
+    tolerance,
+    max number of paths
     '''
 
     if T > 0:
@@ -430,11 +435,12 @@ def extract_paths_rc(paths, count, sequence, val_wo_S, T, S, A, y, M, Tmax,
             next_val_wo_S = A[:, sequence[-1]] * val_wo_S
 
     next_subtree_val = M * next_val_wo_S
-    
+
     tofind = np.where(next_subtree_val > tolerance)[0].tolist()
-    
-    for i in tofind:
-        paths, count = extract_paths_rc(
-            paths, count, sequence + [i], next_val_wo_S[i], T+1, S, A, y, M, Tmax, tolerance)
+
+    if count<max_npaths:
+        for i in tofind:
+            paths, count = extract_paths_rc(
+                paths, count, sequence + [i], next_val_wo_S[i], T+1, S, A, y, M, Tmax, tolerance, max_npaths)
 
     return paths, count
