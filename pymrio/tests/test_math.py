@@ -23,6 +23,7 @@ from pymrio.tools.iomath import calc_F          # noqa
 from pymrio.tools.iomath import calc_M          # noqa
 from pymrio.tools.iomath import calc_e          # noqa
 from pymrio.tools.iomath import calc_accounts   # noqa
+from pymrio.tools.iomath import SPA 
 
 
 # test data
@@ -263,6 +264,34 @@ def td_small_MRIO():
                  index=['ext_type_1', 'ext_type_2'],
                  columns=_Z_multiindex,
                 )
+    
+        paths = pd.DataFrame(
+                data=[
+                    [list([]),    40.0,                1.0,                
+                       list([])],
+                    [list([]),    24.998129633408148,  0.6249532408352036,
+                       list([])],
+                    [list([3]),    4.0,                0.1,
+                       list([('reg2', 'sector1')])],
+                    [list([2]),    3.603448275862069,  0.09008620689655172,
+                       list([('reg1', 'sector3')])],
+                    [list([5]),    3.333333333333333,  0.08333333333333333,
+                       list([('reg2', 'sector3')])],
+                    [list([0]),    1.6666666666666667, 0.04166666666666667,
+                        list([('reg1', 'sector1')])],
+                    [list([1]),    1.3333333333333333, 0.03333333333333333,
+                        list([('reg1', 'sector2')])],
+                    [list([4]),    0.7692307692307693, 0.019230769230769232,
+                        list([('reg2', 'sector2')])],
+                    [list([4, 4]), 0.2958579881656805, 0.007396449704142012,
+                        list([('reg2', 'sector2'), ('reg2', 'sector2')])]
+                        ],
+                 index=['TOTAL', 'REST', 4, 3, 7, 1, 2, 5, 6],
+                 columns=['sequence', 'value', 'contribution', 'path'],
+                 dtype=('object')
+                        )
+
+
     return IO_Data
 
 
@@ -437,3 +466,19 @@ def test_calc_accounts_MRIO(td_small_MRIO):
             nD_imp.sum(axis=1) -
             nD_exp.sum(axis=1),
             )
+
+
+def test_SPA(td_small_MRIO):
+    # calc the SPA
+    paths = SPA(td_small_MRIO.S.loc['ext_type_1'],
+                td_small_MRIO.A,
+                td_small_MRIO.Y.sum(1),
+                M=None, # the function must be able to recalculate M if it's missing
+                Tmax=10,
+                threshold=0.1)
+    
+    # test
+    pdt.assert_frame_equal(
+        td_small_MRIO.paths,
+        paths
+        )

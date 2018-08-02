@@ -1867,9 +1867,7 @@ class IOSystem(CoreSystem):
             sector=None,
             Tmax=10,
             threshold=0.001,
-            filename=None,
-            max_npaths=1000,
-            index=None):
+            max_npaths=1000):
         """ Returns a list of most contributing paths following the structural
         path analysis algorithm of Peters and Hertwich (2006, ESR) for a unit
         demand in a single sector.
@@ -1898,9 +1896,6 @@ class IOSystem(CoreSystem):
             csv file name where to save the results
         max_npaths : int
             maximum number of paths
-        index : list or any iterable
-            list that can be forced to replace an existing index (corresponding
-            to the stressor object)
 
         Returns
         -------
@@ -1937,4 +1932,4 @@ class IOSystem(CoreSystem):
         else:
             y = self.Y.sum(1)
 
-        return SPA(S, self.A, y, M=M, Tmax=Tmax, threshold=threshold, filename=filename, max_npaths=max_npaths, index=index)
+        return SPA(S, self.A, y, M=M, Tmax=Tmax, threshold=threshold, max_npaths=max_npaths)

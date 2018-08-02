@@ -342,8 +342,7 @@ def calc_accounts(S, L, Y, nr_sectors):
     return (D_cba, D_pba, D_imp, D_exp)
 
 
-def SPA(S, A, y, Tmax, threshold, M, filename=None, max_npaths=1000,
-        index=None):
+def SPA(S, A, y, Tmax, threshold, M, max_npaths=1000):
     '''
     Performs a structural path analysis on a given linear algebra system.
     The system can either be a life cycle or an input-output system.
@@ -353,29 +352,26 @@ def SPA(S, A, y, Tmax, threshold, M, filename=None, max_npaths=1000,
 
     Arguments (valid for EXIOBASE)
     ---------
-    - F: 1-by-p (or n) matrix containing stressors, mixed units per M€
-    - A: p × p (or n × n) matrix, containing intermediate consumption, M€/M€,
+    - S: 1-by-p (or n) matrix containing stressors, mixed units per M€
+    - A: p × p (or n × n) dataframe containing intermediate consumption, M€/M€,
     - y: p × 1 (or n × 1) total final demand vector, in M€,
     - Tmax: integer, maximum number of upstream tiers to search,
     - threshold: float between 0 and 1, cutoff under which a contribution
         is discarded,
-    - filename: where to store the results,
-    - M: multiplier (F*L), providing M saves memory,
+    - M: multiplier (S*L), providing M saves memory,
 
     ...where p is the number of products, and n the number of industries
     '''
 
-    if type(A) == pd.core.frame.DataFrame:
-        if not index:
-            index = A.index
-        A = A.values
+    if M is None:
+        M = calc_M(S, calc_L(A))
 
-    if 'M' not in locals():
-        M = np.linalg.solve(np.eye(A.shape[0]) - A.T, S)
+    #if type(A) == pd.core.frame.DataFrame:
+    index = A.index
+    A = A.values
 
     # Calculate total emissions and tolerance
     e = M.dot(y)
-    print(M, y, e)
     tolerance = threshold * e
 
     # Start extracting the paths
@@ -392,9 +388,6 @@ def SPA(S, A, y, Tmax, threshold, M, filename=None, max_npaths=1000,
     if type(index) in [list, pd.core.indexes.multi.MultiIndex, pd.core.index]:
         df_paths['path'] = [[index[ss] for ss in s]
                             for s in df_paths['sequence']]
-
-    if 'filename' in locals():
-        df_paths.to_csv(filename)
 
     return df_paths
 
@@ -437,10 +430,9 @@ def extract_paths_rc(paths, count, sequence, val_wo_S, T, S, A, y, M, Tmax,
             next_val_wo_S = A[:, sequence[-1]] * val_wo_S
 
     next_subtree_val = M * next_val_wo_S
-
-    #print(count, next_subtree_val.iloc[0])
+    
     tofind = np.where(next_subtree_val > tolerance)[0].tolist()
-
+    
     for i in tofind:
         paths, count = extract_paths_rc(
             paths, count, sequence + [i], next_val_wo_S[i], T+1, S, A, y, M, Tmax, tolerance)
