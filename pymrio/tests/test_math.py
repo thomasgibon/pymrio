@@ -470,13 +470,13 @@ def test_calc_accounts_MRIO(td_small_MRIO):
 
 def test_SPA(td_small_MRIO):
     # calc the SPA
-    paths = SPA(td_small_MRIO.S.loc['ext_type_1'],
+    paths = SPA(td_small_MRIO.S.loc['ext_type_2'],
                 td_small_MRIO.A,
                 td_small_MRIO.Y.sum(1),
                 M=None, # the function must be able to recalculate M if it's missing
                 Tmax=10,
                 threshold=0.1)
-    
+                
     # test
     pdt.assert_frame_equal(
         td_small_MRIO.paths,
